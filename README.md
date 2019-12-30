@@ -1,4 +1,4 @@
-# freemall
+# 班级官网
 
 ## Project setup
 ```
