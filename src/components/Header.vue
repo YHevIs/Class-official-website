@@ -3,7 +3,7 @@
     <div v-bind:class="{nav: isNav,navBlack: isNavBlack}">
       <ul>
         <li>
-          <router-link to="./">首页</router-link>
+          <router-link to="./">home</router-link>
         </li>
         <li>
           <router-link to="address">address</router-link>
@@ -18,9 +18,10 @@
           <a>导航4</a>
         </li>
       </ul>
+
     </div>
     <div class="banner">
-      <h1>标题</h1>
+      <h1>班级官网</h1>
       <p>副标题</p>
     </div>
   </div>
@@ -33,9 +34,12 @@ export default {
   RebootHeader,
 
   data: function() {
+    const vm = window.vm;
     return {
+      vm:vm,
       isNav: true,
-      isNavBlack: false
+      isNavBlack: false,
+      lang:'zh-CN',
     };
   },
 
@@ -44,9 +48,7 @@ export default {
   },
   methods: {
     navTres() {
-      // window.console.log(1);
       var scrollTop = document.documentElement.scrollTop;
-      // var dom = document.getElementsByClassName("nav");
       if (scrollTop > 600) {
         var _this = this;
         window.console.log(_this);
@@ -56,6 +58,9 @@ export default {
         _this = this;
         _this.isNavBlack = false;
       }
+    },
+    changLang(){
+      alert(this.lang)
     }
   }
 };
@@ -110,9 +115,21 @@ li {
 .banner p {
   margin-bottom: 100px;
 }
+.banner h1{
+  color:white;
+  text-shadow: 
+  0 1px hsl(0,0%,85%),
+  0 2px hsl(0,0%,80%),
+  0 3px hsl(0,0%,75%),
+  0 4px hsl(0,0%,70%),
+  0 5px hsl(0,0%,65%),
+  0 5px 10 black;
+  
+}
 .navBlack {
   background: #000;
   animation: nav_1 .3s ease;
+  border-radius: 0 0 3% 3%;
 }
 @keyframes banner_1 {
   0% {
