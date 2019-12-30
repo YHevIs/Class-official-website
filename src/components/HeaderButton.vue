@@ -21,7 +21,7 @@ export default {
   width: 120px;
   border-radius: 40px ;
   background: #fff;
-  box-shadow: 0 0 5px 5px rgba(0,0,0,.3);
+  box-shadow: 0 8px 5px -5px rgba(0,0,0,.3);
   color: #000;
   display: flex;
   justify-content: center;
