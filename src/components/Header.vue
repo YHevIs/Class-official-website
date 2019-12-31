@@ -3,7 +3,7 @@
     <div v-bind:class="{nav: isNav,navBlack: isNavBlack}">
       <ul>
         <li>
-          <router-link to="./">home</router-link>
+          <router-link to="./">Home</router-link>
         </li>
         <li>
           <router-link to="address">address</router-link>
@@ -53,11 +53,11 @@ export default {
   methods: {
     navTres() {
       var scrollTop = document.documentElement.scrollTop;
-      if (scrollTop > 600) {
+      if (scrollTop > 450) {
         var _this = this;
         _this.isNavBlack = true;
       }
-      if (scrollTop <= 600) {
+      if (scrollTop <= 450) {
         _this = this;
         _this.isNavBlack = false;
       }
@@ -132,14 +132,26 @@ li {
 }
 .banner h1,.banner p{
   opacity: 0;
-  animation: banner_text 1s ease .7s forwards
+  animation: banner_text 1s ease .7s forwards;
+  z-index: 10;
+
+}
+.banner canvas{
+  animation: banner_canvas 3s ease  forwards;
 }
 .navBlack {
   background: #000;
   animation: nav_1 .3s ease;
   border-radius: 0 0 3% 3%;
 }
-
+@keyframes banner_canvas{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: .3;
+  }
+}
 
 @keyframes banner_1 {
   0% {

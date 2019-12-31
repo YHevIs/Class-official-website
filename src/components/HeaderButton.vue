@@ -17,7 +17,7 @@ export default {
 
 <style>
 .header-bton > .main{
-  height: 70px;
+  height: 50px;
   width: 120px;
   border-radius: 40px ;
   background: #fff;
@@ -27,7 +27,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -35px;
+  top: -25px;
   left: calc(50% - 60px);
   font-size: 14px;
   animation: headerButton 1s ease;
@@ -38,7 +38,7 @@ export default {
     top:0
   }
   100%{
-    top:-35px;
+    top:-25px;
     opacity: 1;
   }
 }

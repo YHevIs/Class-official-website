@@ -33,7 +33,7 @@ export default {
 
       this.scene = new Three.Scene();
 
-      let geometry = new Three.BoxGeometry(0.2, 0.2, 0.2);
+      let geometry = new Three.BoxGeometry(0.35, 0.35, 0.35);
       let material = new Three.MeshNormalMaterial();
 
       this.mesh = new Three.Mesh(geometry, material);
@@ -45,8 +45,8 @@ export default {
     },
     animate: function() {
       requestAnimationFrame(this.animate);
-      this.mesh.rotation.x += 0.01;
-      this.mesh.rotation.y += 0.02;
+      this.mesh.rotation.x == 0.99 ? this.mesh.rotation.x = 0 : this.mesh.rotation.x += 0.01;
+      this.mesh.rotation.y == 0.98 ? this.mesh.rotation.y = 0 : this.mesh.rotation.y += 0.02;
       this.renderer.render(this.scene, this.camera);
     }
   }

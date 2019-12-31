@@ -2,6 +2,11 @@
   <div class="home">
     <nav-header></nav-header>
     <header-button></header-button>
+    <div class="body-main_1">
+    <time-list></time-list>
+    <about-us></about-us>
+    </div>
+
     <v-footer></v-footer>
     <div>
       
@@ -14,12 +19,16 @@
 import navHeader from './../components/Header'
 import headerButton from './../components/HeaderButton'
 import vFooter from './../components/Footer'
+import timeList from './../components/TimeList'
+import aboutUs from './../components/AboutUs'
 export default {
   name: 'home',
   components:{
     navHeader,
     headerButton,
-    vFooter
+    timeList,
+    vFooter,
+    aboutUs
   }
 }
 </script>
@@ -32,6 +41,19 @@ export default {
   }
   .home{
     height: 15000px;
-    background: #fff
+    background: rgba(0,0,0,.8)
+
+  }
+  .body-main_1{
+    display: flex;
+    padding: 0 8.5%;
+  }
+  @keyframes body-main_1-1{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
 </style>
