@@ -9,30 +9,30 @@
           <router-link to="address">address</router-link>
         </li>
         <li>
-          <a>导航2</a>
+          <a>nav2</a>
         </li>
         <li>
-          <a>导航3</a>
+          <a>nav3</a>
         </li>
         <li>
-          <a>导航4</a>
+          <a>nav4</a>
         </li>
       </ul>
 
     </div>
-    <div class="banner">
-      <h1>班级官网</h1>
-      <p>副标题</p>
-    </div>
+    <banner-three class="banner" id="container"></banner-three>
   </div>
 </template>
 
 <script>
 import RebootHeader from "./RebootHeader";
+import bannerThree from "./BannerThree";
 export default {
   name: "nav-header",
   RebootHeader,
-
+  components:{
+    bannerThree
+  },
   data: function() {
     const vm = window.vm;
     return {
@@ -40,6 +40,10 @@ export default {
       isNav: true,
       isNavBlack: false,
       lang:'zh-CN',
+      // camera: null,
+      // scene: null,
+      // renderer: null,
+
     };
   },
 
@@ -51,7 +55,6 @@ export default {
       var scrollTop = document.documentElement.scrollTop;
       if (scrollTop > 600) {
         var _this = this;
-        window.console.log(_this);
         _this.isNavBlack = true;
       }
       if (scrollTop <= 600) {
@@ -61,7 +64,8 @@ export default {
     },
     changLang(){
       alert(this.lang)
-    }
+    },
+    
   }
 };
 </script>
@@ -126,28 +130,40 @@ li {
   0 5px 10 black;
   
 }
+.banner h1,.banner p{
+  opacity: 0;
+  animation: banner_text 1s ease .7s forwards
+}
 .navBlack {
   background: #000;
   animation: nav_1 .3s ease;
   border-radius: 0 0 3% 3%;
 }
+
+
 @keyframes banner_1 {
   0% {
+    opacity: 0;
     top: -600px;
   }
   65% {
+    opacity: 1;
     top: 0px;
   }
   80% {
+    opacity: 1;
     top: -20px;
   }
   90% {
+    opacity: 1;
     top: 10px;
   }
   95% {
+    opacity: 1;
     top: -10px;
   }
   100% {
+    opacity: 1;
     top: 0px;
   }
 }
@@ -157,6 +173,14 @@ li {
   }
   100%{
     background: #000;
+  }
+}
+@keyframes banner_text {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
 </style>>
