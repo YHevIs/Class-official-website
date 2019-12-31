@@ -2,7 +2,7 @@
   <div class="header-bton">
     <div></div>
     <div class="main">
-      登陆
+      Sign in
     </div>
     <div></div>
   </div>
@@ -30,5 +30,16 @@ export default {
   top: -35px;
   left: calc(50% - 60px);
   font-size: 14px;
+  animation: headerButton 1s ease;
+}
+@keyframes headerButton{
+  0%{
+    opacity: 0;
+    top:0
+  }
+  100%{
+    top:-35px;
+    opacity: 1;
+  }
 }
 </style>
