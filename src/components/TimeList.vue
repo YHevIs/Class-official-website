@@ -6,7 +6,7 @@
         <h2 class="timelineMajorMarker">2015</h2>
         <dl class="timelineMinor">
           <dt id="event01">
-            <a>事件标题</a>
+            <a>Event title</a>
           </dt>
           <dd class="timelineEvent" id="event01EX" style="display: none; ">
             <p>事件内容.</p>
@@ -16,7 +16,7 @@
         <!-- /.timelineMinor -->
         <dl class="timelineMinor">
           <dt id="event02">
-            <a>又一事件</a>
+            <a>Another thing</a>
           </dt>
           <dd class="timelineEvent" id="event02EX" style="display: none; ">
             <p>内容</p>
@@ -29,7 +29,7 @@
         <h2 class="timelineMajorMarker">2016</h2>
         <dl class="timelineMinor">
           <dt id="event03">
-            <a>事件标题</a>
+            <a>Event title</a>
           </dt>
           <dd class="timelineEvent" id="event03EX" style="display: none; ">
             <p>事件内容.</p>
@@ -39,7 +39,7 @@
         <!-- /.timelineMinor -->
         <dl class="timelineMinor">
           <dt id="event4">
-            <a>又一事件</a>
+            <a>Another thing</a>
           </dt>
           <dd class="timelineEvent" id="event04EX" style="display: none; ">
             <p>内容</p>
@@ -52,7 +52,7 @@
         <h2 class="timelineMajorMarker">2017</h2>
         <dl class="timelineMinor">
           <dt id="event05">
-            <a>事件标题</a>
+            <a>Event title</a>
           </dt>
           <dd class="timelineEvent" id="event05EX" style="display: none; ">
             <p>事件内容.</p>
@@ -62,7 +62,7 @@
         <!-- /.timelineMinor -->
         <dl class="timelineMinor">
           <dt id="event6">
-            <a>又一事件</a>
+            <a>Another thing</a>
           </dt>
           <dd class="timelineEvent" id="event06EX" style="display: none; ">
             <p>内容</p>
@@ -75,17 +75,17 @@
         <h2 class="timelineMajorMarker">2018</h2>
         <dl class="timelineMinor">
           <dt id="event07">
-            <a>事件标题</a>
+            <a>Event title</a>
           </dt>
           <dd class="timelineEvent" id="event07EX" style="display: none; ">
-            <p>事件内容.</p>
+            <p>Another thing</p>
           </dd>
           <!-- /.timelineEvent -->
         </dl>
         <!-- /.timelineMinor -->
         <dl class="timelineMinor">
           <dt id="event8">
-            <a>又一事件</a>
+            <a>Another thing</a>
           </dt>
           <dd class="timelineEvent" id="event08EX" style="display: none; ">
             <p>内容</p>
@@ -98,7 +98,7 @@
         <h2 class="timelineMajorMarker">2019</h2>
         <dl class="timelineMinor">
           <dt id="event09">
-            <a>事件标题</a>
+            <a>Event title</a>
           </dt>
           <dd class="timelineEvent" id="event09EX" style="display: none; ">
             <p>事件内容.</p>
@@ -108,7 +108,7 @@
         <!-- /.timelineMinor -->
         <dl class="timelineMinor">
           <dt id="event10">
-            <a>又一事件</a>
+            <a>Another thing</a>
           </dt>
           <dd class="timelineEvent" id="event10EX" style="display: none; ">
             <p>内容</p>
@@ -121,7 +121,7 @@
         <h2 class="timelineMajorMarker">2020</h2>
         <dl class="timelineMinor">
           <dt id="event11">
-            <a>事件标题</a>
+            <a>Event title</a>
           </dt>
           <dd class="timelineEvent" id="event11EX" style="display: none; ">
             <p>事件内容.</p>
@@ -131,7 +131,7 @@
         <!-- /.timelineMinor -->
         <dl class="timelineMinor">
           <dt id="event12">
-            <a>又一事件</a>
+            <a>Another thing</a>
           </dt>
           <dd class="timelineEvent" id="event12EX" style="display: none; ">
             <p>内容</p>
