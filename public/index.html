@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="inc/colorbox.css" type="text/css" media="screen">
     <title>班级官网</title>
 </head>
 
@@ -15,6 +18,31 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+
+    <!-- GLOBAL CORE SCRIPTS -->
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="inc/colorbox.js"></script>
+    <script type="text/javascript" src="js/timeliner.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.timeliner({
+                startOpen: ['#19550828EX', '#19630828EX']
+            });
+            $.timeliner({
+                timelineContainer: '#timelineContainer_2'
+            });
+            // Colorbox Modal
+            $(".CBmodal").colorbox({
+                inline: true,
+                initialWidth: 100,
+                maxWidth: 682,
+                initialHeight: 100,
+                transition: "elastic",
+                speed: 750
+            });
+        });
+    </script>
 </body>
 
 </html>
