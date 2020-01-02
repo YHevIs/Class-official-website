@@ -19,4 +19,7 @@ export default {
     padding: 20px 0 20px 8%;
     flex:1;
   }
+  .about-us p{
+    margin: 10px 0;
+  }
 </style>
