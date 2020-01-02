@@ -2,14 +2,13 @@
   <div class="bannerThree">
     <div class="banner-text">
       <h1>Class official website</h1>
-      <p>They mutually encourage each other.</p>
+      <p>With memory,with fantasy,to life,to the motherland in all directions.</p>
     </div>
   </div>
 </template>
 
 <script>
 import * as Three from "three";
-
 export default {
   name: "banner-three",
   data: function() {
