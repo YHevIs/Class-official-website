@@ -6,16 +6,16 @@
           <router-link to="./">Home</router-link>
         </li>
         <li>
-          <router-link to="address">address</router-link>
+          <a>Time list</a>
         </li>
         <li>
-          <a>nav2</a>
+          <router-link to="address">address</router-link>
         </li>
         <li>
           <a>nav3</a>
         </li>
         <li>
-          <a>nav4</a>
+          <a>Author</a>
         </li>
       </ul>
 

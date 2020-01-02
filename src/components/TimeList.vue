@@ -1,6 +1,13 @@
 <template>
   <div class="time-list">
       <h2>Time list</h2>
+      <ul>
+        <li>
+          <div>
+            <div></div>
+          </div>
+        </li>
+      </ul>
   </div>
 </template>
 
@@ -13,6 +20,8 @@ export default {
 
 <style>
 .time-list{
-  width: 75%;
+  width: 60%;
+  border-right: 2px solid rgba(200,200,200,.5);
+  padding: 20px;
 }
 </style>
