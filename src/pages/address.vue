@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import navHeader from './../components/Header'
+import navHeader from "./../components/Header";
 export default {
-  name: 'addr',
-  components:{
+  name: "addr",
+  components: {
     navHeader
   }
-}
+};
 </script>

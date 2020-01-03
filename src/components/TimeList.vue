@@ -164,7 +164,6 @@ export default {
 };
 </script>
 
-
 <style>
 .time-list {
   width: 60%;
