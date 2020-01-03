@@ -44,7 +44,18 @@ export default {
     inauguration
   },
   mounted() {
-    // alert('提示：该页面仅兼容IE10以上页面')
+    window.addEventListener("scroll", this.rollingLoading);
+  },
+  methods: {
+    rollingLoading() {
+      var scrollTop = document.documentElement.scrollTop;
+      window.console.log(scrollTop);
+      if (scrollTop > 600) {
+        var _this = this;
+        document.getElementsByClassName("aboutClass").className = 'aboutClassInit'
+        window.removeEventListener("scroll", _this.rollingLoading);
+      }
+    }
   }
 };
 </script>
@@ -87,6 +98,17 @@ h2 {
 }
 .aboutClass {
   padding: 0 8.5%;
+  opacity: 0;
+  margin-top: 10px;
+  /* transition: .35s ease; */
+  animation: aboutClassInit 0.5s forwards;
+
+}
+@keyframes aboutClassInit {
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
 }
 @keyframes body-main_1-1 {
   0% {
