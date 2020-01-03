@@ -11,10 +11,12 @@
       </div>
 
     </article>
+    <inauguration></inauguration>
     <div class="body-main_1">
       <time-list></time-list>
-      <about-us></about-us>
+      <message-board></message-board>
     </div>
+      <about-us></about-us>
 
     <v-footer></v-footer>
     <div></div>
@@ -27,6 +29,8 @@ import headerButton from "./../components/HeaderButton";
 import vFooter from "./../components/Footer";
 import timeList from "./../components/TimeList";
 import aboutUs from "./../components/AboutUs";
+import messageBoard from './../components/MessageBoard'
+import inauguration from './../components/Inauguration'
 export default {
   name: "home",
   components: {
@@ -34,7 +38,9 @@ export default {
     headerButton,
     timeList,
     vFooter,
-    aboutUs
+    aboutUs,
+    messageBoard,
+    inauguration
   },
   mounted() {
     // alert('提示：该页面仅兼容IE10以上页面')
