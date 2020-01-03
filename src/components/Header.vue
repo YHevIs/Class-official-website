@@ -105,6 +105,7 @@ li {
   position: relative;
   top: 0px;
   animation: banner_1 1s ease;
+  overflow: hidden;
 }
 .banner {
   display: flex;
