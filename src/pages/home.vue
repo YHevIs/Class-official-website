@@ -51,8 +51,21 @@ export default {
   padding: 0;
   color: #fff;
 }
-.home {
-  background: rgba(0, 0, 0, 0.8);
+/* mac页面卡顿兼容，同等于： */
+/* .home {
+  background: repeating-linear-gradient(60deg,rgba(0, 0, 0, 0.78),rgba(0, 0, 0, 0.78) 150px,rgba(0, 0, 0, 0.8) 0,rgba(0, 0, 0, 0.8) 300px);
+  background-attachment: fixed;
+} */
+.home:before {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: repeating-linear-gradient(60deg,rgba(0, 0, 0, 0.78),rgba(0, 0, 0, 0.78) 150px,rgba(0, 0, 0, 0.8) 0,rgba(0, 0, 0, 0.8) 300px);
+  background-size: cover;
 }
 .body-main_1 {
   display: flex;
