@@ -16,7 +16,6 @@
       <time-list></time-list>
       <message-board></message-board>
     </div>
-      <about-us></about-us>
 
     <v-footer></v-footer>
     <div></div>
@@ -28,7 +27,6 @@ import navHeader from "./../components/Header";
 import headerButton from "./../components/HeaderButton";
 import vFooter from "./../components/Footer";
 import timeList from "./../components/TimeList";
-import aboutUs from "./../components/AboutUs";
 import messageBoard from './../components/MessageBoard'
 import inauguration from './../components/Inauguration'
 export default {
@@ -38,7 +36,6 @@ export default {
     headerButton,
     timeList,
     vFooter,
-    aboutUs,
     messageBoard,
     inauguration
   },
@@ -55,12 +52,12 @@ export default {
   color: #fff;
 }
 .home {
-  height: 3000px;
   background: rgba(0, 0, 0, 0.8);
 }
 .body-main_1 {
   display: flex;
-  padding: 0 8.5%;
+  padding: 20px 8.5% 0;
+  border-top: solid 1px rgba(255,255,255,.1); 
 }
 h2 {
   margin: 20px 0 30px;
