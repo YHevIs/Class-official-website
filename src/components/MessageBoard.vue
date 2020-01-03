@@ -1,6 +1,11 @@
 <template>
   <div class="message-board">
     <h2>Message Board</h2>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
   </div>
 </template>
 
