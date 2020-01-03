@@ -1,6 +1,6 @@
 <template>
   <div class="inauguration">
-    <div id="myChart" :style="{width: '100%', height:'500px'}"></div>
+    <div id="myChart" :style="{ width: '100%', height: '500px' }"></div>
   </div>
 </template>
 
@@ -21,83 +21,85 @@ export default {
       let myChart = this.$echarts.init(document.getElementById("myChart"));
       // 绘制图表
       myChart.setOption({
-        backgroundColor: 'rgba(0, 0, 0, 0)',
+        backgroundColor: "rgba(0, 0, 0, 0)",
 
-    title: {
-        text: 'Inauguration',
-        left: 'center',
-        top: 20,
-        textStyle: {
-            color: '#ccc'
-        }
-    },
+        title: {
+          text: "Inauguration",
+          left: "center",
+          top: 20,
+          textStyle: {
+            color: "#ccc"
+          }
+        },
 
-    tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b} : {c} ({d}%)'
-    },
+        tooltip: {
+          trigger: "item",
+          formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
 
-    visualMap: {
-        show: false,
-        min: 0,
-        max: 20,
-        inRange: {
+        visualMap: {
+          show: false,
+          min: 0,
+          max: 20,
+          inRange: {
             colorLightness: [0, 1]
-        }
-    },
-    series: [
-        {
-            name: '职业构成',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '50%'],
+          }
+        },
+        series: [
+          {
+            name: "职业构成",
+            type: "pie",
+            radius: "55%",
+            center: ["50%", "50%"],
             data: [
-                {value: 2, name: '平面设计'},
-                {value: 19, name: '实习生'},
-                {value: 1, name: '服装销售'},
-                {value: 1, name: '排版'},
-                {value: 1, name: '营业员'},
-                {value: 1, name: '视频剪辑'},
-                {value: 1, name: '客户经理'},
-                {value: 1, name: 'web前端开发'},
-                {value: 3, name: '设计'},
-                {value: 1, name: '助理'},
-                {value: 1, name: '投诉处理'},
-                {value: 1, name: '协勤'},
-                {value: 1, name: '美工试用期'},
-                {value: 1, name: '储备经理'},
-                {value: 1, name: '打包'},
-                {value: 2, name: '美工'},
-                {value: 1, name: '插画师'},
-                {value: 1, name: '仓库'},
-                {value: 1, name: '客服'},
-                {value: 6, name: '未知'},
-            ].sort(function (a, b) { return a.value - b.value; }),
-            roseType: 'radius',
+              { value: 2, name: "平面设计" },
+              { value: 19, name: "实习生" },
+              { value: 1, name: "服装销售" },
+              { value: 1, name: "排版" },
+              { value: 1, name: "营业员" },
+              { value: 1, name: "视频剪辑" },
+              { value: 1, name: "客户经理" },
+              { value: 1, name: "web前端开发" },
+              { value: 3, name: "设计" },
+              { value: 1, name: "助理" },
+              { value: 1, name: "投诉处理" },
+              { value: 1, name: "协勤" },
+              { value: 1, name: "美工试用期" },
+              { value: 1, name: "储备经理" },
+              { value: 1, name: "打包" },
+              { value: 2, name: "美工" },
+              { value: 1, name: "插画师" },
+              { value: 1, name: "仓库" },
+              { value: 1, name: "客服" },
+              { value: 6, name: "未知" }
+            ].sort(function(a, b) {
+              return a.value - b.value;
+            }),
+            roseType: "radius",
             label: {
-                color: 'rgba(255, 255, 255, 0.3)'
+              color: "rgba(255, 255, 255, 0.3)"
             },
             labelLine: {
-                lineStyle: {
-                    color: 'rgba(255, 255, 255, 0.3)'
-                },
-                smooth: 0.2,
-                length: 30,
-                length2: 25
+              lineStyle: {
+                color: "rgba(255, 255, 255, 0.3)"
+              },
+              smooth: 0.2,
+              length: 30,
+              length2: 25
             },
             itemStyle: {
-                color: '#fff',
-                shadowBlur: 200,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
+              color: "#fff",
+              shadowBlur: 200,
+              shadowColor: "rgba(0, 0, 0, 0.5)"
             },
 
-            animationType: 'scale',
-            animationEasing: 'elasticOut',
-            animationDelay: function () {
-                return Math.random() * 200;
+            animationType: "scale",
+            animationEasing: "elasticOut",
+            animationDelay: function() {
+              return Math.random() * 200;
             }
-        }
-    ]
+          }
+        ]
       });
     }
   }
