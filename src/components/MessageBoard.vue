@@ -18,5 +18,6 @@ export default {
 <style>
   .message-board{
     padding: 10px 20px;
+    width: 100%;
   }
 </style>
