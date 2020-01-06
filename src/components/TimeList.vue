@@ -167,7 +167,6 @@ export default {
 <style>
 .time-list {
   width: 60%;
-  border-right: 2px solid rgba(200, 200, 200, 0.5);
   padding: 20px;
 }
 .timeListButton {
