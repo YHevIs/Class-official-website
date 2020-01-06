@@ -75,7 +75,7 @@ a img {
     border-left: 2px solid #ccc;
     margin: 20px auto;
     width: 100%;
-    height: 1250px;
+    height: calc(100% - 45px);;
     border-right: 1px dotted rgba(200, 200, 200, 0.5);
 
 }
@@ -106,7 +106,7 @@ div.timelineMajor {
     clear: left;
     float: left;
     margin: 0 0 12px;
-    width: 900px;
+    width: 100%;
 }
 
 .timelineMajor h2 {
@@ -136,7 +136,7 @@ dl.timelineMinor {
     margin: 0 12px 0 0;
     padding: 4px 4px 4px 0;
     position: relative;
-    width: 880px;
+    width: calc(100% - 20px);
 }
 
 .timelineMinor dt {
