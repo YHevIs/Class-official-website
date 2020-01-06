@@ -164,4 +164,15 @@ h2 {
   width: 100%;
   transition: 800ms ease all;
 }
+
+
+
+@media  screen and (max-width: 500px) {
+  .body-main_1{
+    flex-direction: column;
+  }
+  .aboutClass p{
+    font-size: 15px;
+  }
+}
 </style>
