@@ -12,9 +12,6 @@
           <router-link to="address">address</router-link>
         </li>
         <li>
-          <a>nav3</a>
-        </li>
-        <li>
           <a>Author</a>
         </li>
       </ul>

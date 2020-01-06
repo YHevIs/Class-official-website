@@ -1,7 +1,15 @@
 <template>
   <div class="inauguration">
-    <div id="myChart_0" :style="{ width: '50%', height: '500px' }"></div>
-    <div id="myChart_1" :style="{ width: '50%', height: '500px' }"></div>
+    <div
+      class="myChart"
+      id="myChart_0"
+      :style="{ width: '50%', height: '500px' }"
+    ></div>
+    <div
+      class="myChart"
+      id="myChart_1"
+      :style="{ width: '50%', height: '500px' }"
+    ></div>
   </div>
 </template>
 
@@ -23,7 +31,7 @@ export default {
       if (scrollTop > 600) {
         var _this = this;
         _this.drawLine();
-        window.removeEventListener("scroll", _this.rollingLoading)
+        window.removeEventListener("scroll", _this.rollingLoading);
       }
     },
 

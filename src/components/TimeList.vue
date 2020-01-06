@@ -185,4 +185,11 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+
+@media screen and (max-width: 500px) {
+  .timelineMajor h2{
+    font-size: 24px;
+  }
+}
 </style>
