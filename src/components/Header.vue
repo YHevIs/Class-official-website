@@ -1,12 +1,12 @@
 <template>
   <div class="header">
-    <div v-bind:class="{nav: isNav,navBlack: isNavBlack}">
+    <div v-bind:class="{ nav: isNav, navBlack: isNavBlack }">
       <ul>
         <li>
           <router-link to="./">Home</router-link>
         </li>
         <li>
-          <a>Time list</a>
+          <a href="javascript:void(0)" @click="goAnchor('time-list')">Time list</a>
         </li>
         <li>
           <router-link to="address">address</router-link>
@@ -15,7 +15,6 @@
           <a>Author</a>
         </li>
       </ul>
-
     </div>
     <banner-three class="banner" id="container"></banner-three>
   </div>
@@ -46,8 +45,16 @@ export default {
 
   mounted() {
     window.addEventListener("scroll", this.navTres);
+
+    
   },
   methods: {
+    goAnchor(selector) {
+        var anchor = document.getElementById(selector) // 参数为要跳转到的元素id
+        anchor.scrollIntoView(true);
+        // document.body.scrollTop = anchor.offsetTop; // chrome
+        // document.documentElement.scrollTop = anchor.offsetTop; // firefox
+    },
     navTres() {
       var scrollTop = document.documentElement.scrollTop;
       if (scrollTop > 450) {
@@ -62,7 +69,7 @@ export default {
     changLang(){
       alert(this.lang)
     },
-    
+
   }
 };
 </script>
@@ -117,37 +124,32 @@ li {
 .banner p {
   margin-bottom: 100px;
 }
-.banner h1{
-  color:white;
-  text-shadow: 
-  0 1px hsl(0,0%,85%),
-  0 2px hsl(0,0%,80%),
-  0 3px hsl(0,0%,75%),
-  0 4px hsl(0,0%,70%),
-  0 5px hsl(0,0%,65%),
-  0 5px 10 black;
-  
+.banner h1 {
+  color: white;
+  text-shadow: 0 1px hsl(0, 0%, 85%), 0 2px hsl(0, 0%, 80%),
+    0 3px hsl(0, 0%, 75%), 0 4px hsl(0, 0%, 70%), 0 5px hsl(0, 0%, 65%),
+    0 5px 10 black;
 }
-.banner h1,.banner p{
+.banner h1,
+.banner p {
   opacity: 0;
-  animation: banner_text 1s ease .7s forwards;
+  animation: banner_text 1s ease 0.7s forwards;
   z-index: 10;
-
 }
-.banner canvas{
-  animation: banner_canvas 3s ease  forwards;
+.banner canvas {
+  animation: banner_canvas 3s ease forwards;
 }
 .navBlack {
   background: #000;
-  animation: nav_1 .3s ease;
+  animation: nav_1 0.3s ease;
   border-radius: 0 0 3% 3%;
 }
-@keyframes banner_canvas{
-  0%{
+@keyframes banner_canvas {
+  0% {
     opacity: 1;
   }
-  100%{
-    opacity: .3;
+  100% {
+    opacity: 0.3;
   }
 }
 
@@ -178,19 +180,19 @@ li {
   }
 }
 @keyframes nav_1 {
-  0%{
+  0% {
     background: none;
   }
-  100%{
+  100% {
     background: #000;
   }
 }
 @keyframes banner_text {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
-}
-</style>>
+}</style
+>>
