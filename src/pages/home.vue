@@ -52,7 +52,8 @@ export default {
       window.console.log(scrollTop);
       if (scrollTop > 600) {
         var _this = this;
-        document.getElementsByClassName("aboutClass").className = 'aboutClassInit'
+        document.getElementsByClassName("aboutClass").className =
+          "aboutClassInit";
         window.removeEventListener("scroll", _this.rollingLoading);
       }
     }
@@ -86,7 +87,19 @@ export default {
     rgba(0, 0, 0, 0.8) 0,
     rgba(0, 0, 0, 0.8) 300px
   );
+  animation: homeBackground 60s infinite ease;
   background-size: cover;
+}
+@keyframes homeBackground {
+  0% {
+    transform:scale(1,1);
+  }
+  50% {
+    transform:scale(1.5,1.5);
+  }
+  1000% {
+    transform:scale(1,1);
+  }
 }
 .body-main_1 {
   display: flex;
@@ -102,7 +115,6 @@ h2 {
   margin-top: 10px;
   /* transition: .35s ease; */
   animation: aboutClassInit 0.5s forwards;
-
 }
 @keyframes aboutClassInit {
   100% {
@@ -165,13 +177,11 @@ h2 {
   transition: 800ms ease all;
 }
 
-
-
-@media  screen and (max-width: 500px) {
-  .body-main_1{
+@media screen and (max-width: 500px) {
+  .body-main_1 {
     flex-direction: column;
   }
-  .aboutClass p{
+  .aboutClass p {
     font-size: 15px;
   }
 }
