@@ -151,7 +151,6 @@ import anime from "animejs";
 export default {
   name: "time-list",
   mounted() {
-    // window.console.log(anime)
     anime({
       targets: ".css-prop-demo",
       backgroundColor: "#FFF",

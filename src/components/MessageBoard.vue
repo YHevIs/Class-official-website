@@ -2,40 +2,18 @@
   <div class="message-board">
     <h2>Message Board</h2>
     <ul class="messages">
-      <li class="message">
+      <li class="message" v-for="message in messages" :key="message.id">
         <div class="messageHead">
           <div class="head-img"><img src="" alt="" /></div>
-          <span>name</span>
+          <span> {{ message.name }}</span>
           <div class="Uas">
-            <p>Ua</p>
-            <p>Ua</p>
+            <p>{{ message.ua }}</p>
+            <p>{{ message.os }}</p>
           </div>
         </div>
         <div class="messageMain">
           <p class="messageText">
-            留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言
-            留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言
-            留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言
-          </p>
-        </div>
-      </li>
-      <li class="message">
-        <div class="messageHead">
-          <div class="head-img"><img src="" alt="" /></div>
-          <span>name</span>
-          <div class="Uas">
-            <p>Ua</p>
-            <p>Ua</p>
-          </div>
-        </div>
-        <div class="messageMain">
-          <p class="messageText">
-            留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言
-            留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言
-            留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言
-            留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言
-            留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言
-            留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言
+            {{ message.messageText }}
           </p>
         </div>
       </li>
@@ -44,20 +22,40 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "message-board",
-
+  data: function() {
+    return {
+      messages: []
+    };
+  },
   mounted() {
     window.addEventListener("scroll", this.rollingLoading);
+    this.messageInit();
 
-    // this.show("messageText");
     let messageDom = document.getElementsByClassName("messageText");
-    for (let message = 0 ; message < messageDom.length ; message ++){
-      this.show(messageDom[message])
+    for (let message = 0; message < messageDom.length; message++) {
+      this.show(messageDom[message]);
     }
-    window.console.log(document.getElementsByClassName("messageText"))
   },
   methods: {
+    messageInit() {
+      this.getlist(
+        "http://localhost/Class-official-website/public/index.php/api/messageBoard",
+        res => {
+          this.messages = res;
+          console.log(res);
+        }
+      );
+    },
+    getlist(url, cb) {
+      axios.get(url).then(res => {
+        if (res) {
+          cb && cb(res.data);
+        }
+      });
+    },
     show(dom) {
       var box = dom;
       var text = box.innerHTML;
@@ -123,8 +121,8 @@ export default {
 .messageHead span {
   margin: 0 10px;
 }
-@media screen and (max-width: 500px){
-  .messageText{
+@media screen and (max-width: 500px) {
+  .messageText {
     font-size: 18px;
   }
 }
