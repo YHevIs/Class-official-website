@@ -49,7 +49,6 @@ export default {
   methods: {
     rollingLoading() {
       var scrollTop = document.documentElement.scrollTop;
-      window.console.log(scrollTop);
       if (scrollTop > 600) {
         var _this = this;
         document.getElementsByClassName("aboutClass").className =
