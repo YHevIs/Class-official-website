@@ -40,21 +40,33 @@ export default {
     }
   },
   methods: {
+    messageInitresOk(title, message) {
+      this.$notify({
+        title: title,
+        message: message,
+        type: 'success',
+      });
+     
+    },
     messageInit() {
       this.getlist(
         "http://localhost/Class-official-website/public/index.php/api/messageBoard",
         res => {
           this.messages = res;
           console.log(res);
+          this.messageInitresOk("初始化", "留言板数据初始化完成");
         }
       );
     },
     getlist(url, cb) {
-      axios.get(url).then(res => {
-        if (res) {
-          cb && cb(res.data);
-        }
-      });
+      axios
+        .get(url)
+        .then(res => {
+          if (res) {
+            cb && cb(res.data);
+          }
+        })
+        .catch(() => {});
     },
     show(dom) {
       var box = dom;
@@ -120,6 +132,9 @@ export default {
 }
 .messageHead span {
   margin: 0 10px;
+}
+.el-notification__content {
+  color: #606266 !important;
 }
 @media screen and (max-width: 500px) {
   .messageText {

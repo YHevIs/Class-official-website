@@ -64,6 +64,8 @@ export default {
 * {
   margin: 0;
   padding: 0;
+}
+a{
   color: #fff;
 }
 /* mac页面卡顿兼容，同等于： */

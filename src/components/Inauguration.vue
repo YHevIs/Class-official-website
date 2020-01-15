@@ -31,6 +31,11 @@ export default {
         var _this = this;
         _this.drawLine();
         window.removeEventListener("scroll", _this.rollingLoading);
+        this.$notify({
+          title: '初始化',
+          message: '统计图初始化完成',
+          type: "success"
+        });
       }
     },
 

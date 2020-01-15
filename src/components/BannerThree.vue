@@ -17,7 +17,11 @@ export default {
   mounted() {
     this.init();
     this.animate();
-
+    this.$notify({
+          title: '初始化',
+          message: 'Banner3D渲染初始化完成',
+          type: "success"
+        });
   },
   methods: {
     init: function() {
