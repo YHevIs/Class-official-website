@@ -1,9 +1,9 @@
 <template>
   <div class="header-bton">
     <div></div>
-    <div class="main">
+    <router-link class="main" to="login">
       Sign in
-    </div>
+    </router-link>
     <div></div>
   </div>
 </template>

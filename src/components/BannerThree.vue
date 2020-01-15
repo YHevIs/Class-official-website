@@ -15,9 +15,9 @@ export default {
     return {};
   },
   mounted() {
-    // this.init();
+    this.init();
     this.animate();
-    
+
   },
   methods: {
     init: function() {
