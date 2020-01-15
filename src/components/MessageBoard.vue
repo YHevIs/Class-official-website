@@ -5,7 +5,7 @@
       <li class="message" v-for="message in messages" :key="message.id">
         <div class="messageHead">
           <div class="head-img"><img src="" alt="" /></div>
-          <span> {{ message.name }}</span>
+          <span> {{ message.username }}</span>
           <div class="Uas">
             <p>{{ message.ua }}</p>
             <p>{{ message.os }}</p>
@@ -13,7 +13,7 @@
         </div>
         <div class="messageMain">
           <p class="messageText">
-            {{ message.messageText }}
+            {{ message.message }}
           </p>
         </div>
       </li>

@@ -9,7 +9,7 @@
           <a href="javascript:void(0)" @click="goAnchor('time-list')">Time list</a>
         </li>
         <li>
-          <router-link to="address">address</router-link>
+          <router-link to="login">Login</router-link>
         </li>
         <li>
           <a>Author</a>
