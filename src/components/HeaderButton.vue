@@ -32,6 +32,7 @@ export default {
   font-size: 14px;
   animation: headerButton 1s ease;
 }
+
 @keyframes headerButton{
   0%{
     opacity: 0;

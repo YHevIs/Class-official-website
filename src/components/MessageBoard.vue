@@ -7,8 +7,8 @@
           <div class="head-img"><img src="" alt="" /></div>
           <span> {{ message.username }}</span>
           <div class="Uas">
-            <p>{{ message.ua }}</p>
-            <p>{{ message.os }}</p>
+            <p>{{ !message.ua ? message.ua = '未知' : message.ua }}</p>
+            <p>{{ !message.os ? message.os = '未知' : message.os}}</p>
           </div>
         </div>
         <div class="messageMain">
