@@ -44,17 +44,20 @@ export default {
   },
 
   mounted() {
+    //开始监听滚动
     window.addEventListener("scroll", this.navTres);
 
     
   },
   methods: {
+    //跳转锚点
     goAnchor(selector) {
-        var anchor = document.getElementById(selector) // 参数为要跳转到的元素id
+        var anchor = document.getElementById(selector) 
         anchor.scrollIntoView(true);
         // document.body.scrollTop = anchor.offsetTop; // chrome
         // document.documentElement.scrollTop = anchor.offsetTop; // firefox
     },
+    //滚动事件
     navTres() {
       var scrollTop = document.documentElement.scrollTop;
       if (scrollTop > 450) {

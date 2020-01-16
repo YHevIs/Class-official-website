@@ -15,6 +15,7 @@ export default {
     return {};
   },
   mounted() {
+    //初始化
     this.init();
     this.animate();
     this.$notify({
@@ -24,6 +25,7 @@ export default {
         });
   },
   methods: {
+    //banner动画初始化
     init: function() {
       let container = document.getElementById("container");
 
@@ -47,6 +49,7 @@ export default {
       this.renderer.setSize(container.clientWidth, container.clientHeight);
       container.appendChild(this.renderer.domElement);
     },
+    //banner动画update
     animate: function() {
       requestAnimationFrame(this.animate);
       this.mesh.rotation.x == 0.99 ? this.mesh.rotation.x = 0 : this.mesh.rotation.x += 0.01;

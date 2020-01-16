@@ -12,7 +12,9 @@
     "axios": "^0.19.0",
     "core-js": "^3.4.3",
     "echarts": "^4.6.0",
+    "element-ui": "^2.13.0",
     "jquery": "^3.4.1",
+    "js-md5": "^0.7.3",
     "three": "^0.112.1",
     "three.js": "^0.77.1",
     "vue": "^2.6.10",
@@ -28,6 +30,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "prettier": "^1.19.1",
+    "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
