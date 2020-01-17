@@ -7,6 +7,7 @@ import echarts from 'echarts'
 
 import ElementUI from 'element-ui'	//手动变红
 import '../node_modules/element-ui/lib/theme-chalk/index.css'	//手动变红
+import store from './store'
 
 Vue.use(VueAxios, axios)
 Vue.use(ElementUI)
@@ -18,7 +19,6 @@ Vue.prototype.$echarts = echarts
 
 window.vm = new Vue({
     router,
-    render: h => h(App),
-
-
+    store,
+    render: h => h(App)
 }).$mount('#app')
