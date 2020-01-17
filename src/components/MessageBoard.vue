@@ -4,11 +4,15 @@
     <ul class="messages">
       <li class="message" v-for="message in messages" :key="message.id">
         <div class="messageHead">
-          <div class="head-img"><img src="" alt="" /></div>
+          <el-avatar
+            size="small"
+            class="head-img"
+            :src="!message.headImgUrl ? headImgUrl : message.headImgUrl "
+          ></el-avatar>
           <span> {{ message.username }}</span>
           <div class="Uas">
-            <p>{{ !message.ua ? message.ua = '未知' : message.ua }}</p>
-            <p>{{ !message.os ? message.os = '未知' : message.os}}</p>
+            <p>{{ !message.ua ? (message.ua = "未知") : message.ua }}</p>
+            <p>{{ !message.os ? (message.os = "未知") : message.os }}</p>
           </div>
         </div>
         <div class="messageMain">
@@ -27,7 +31,9 @@ export default {
   name: "message-board",
   data: function() {
     return {
-      messages: []
+      messages: [],
+      headImgUrl:
+        "https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
     };
   },
   mounted() {
@@ -44,9 +50,8 @@ export default {
       this.$notify({
         title: title,
         message: message,
-        type: 'success',
+        type: "success"
       });
-     
     },
     messageInit() {
       this.getlist(
@@ -131,7 +136,7 @@ export default {
   padding-bottom: 10px;
 }
 .messageHead span {
-  margin: 0 10px;
+  margin: 0 3.5px;
 }
 .el-notification__content {
   color: #606266 !important;

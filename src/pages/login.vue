@@ -7,7 +7,7 @@
           <el-input v-model="form.username"></el-input>
         </el-form-item>
         <el-form-item label="密码：">
-          <el-input v-model="form.password"></el-input>
+          <el-input type="password" v-model="form.password"></el-input>
         </el-form-item>
         <el-form-item label="认证：">
           <el-select v-model="form.securityPolicy" placeholder="我班校区位于">
@@ -31,6 +31,9 @@
 </template>
 
 <script>
+import md5 from "js-md5";
+import axios from "axios";
+// import instance from '../axios'
 export default {
   name: "login",
   components: {},
@@ -44,9 +47,66 @@ export default {
     };
   },
   methods: {
+    // axios{
+    //   url: '',
+    //   data:{
+    //     type: sss
+    //   }
+    //   beforeSend: function(request){
+    //     request.setrequestheader('key', token)
+    //   },
+    //   success: v,
+
+    // },
     //表单提交
     onSubmit() {
-      console.log("submit!");
+      let md5Password = md5(this.form.password);
+      let data = {
+        username: this.form.username,
+        password: md5Password,
+        securityPolicy: this.form.securityPolicy
+      };
+      axios
+        .post(
+          "http://localhost/Class-official-website/public/index.php/api/userLogin",
+          data
+        )
+        .then(res => {
+          console.log(res);
+          switch (res.data) {
+            case "error,no username":
+              this.$notify.error({
+                title: "登陆失败",
+                message: "用户名不存在"
+              });
+              break;
+            case "error,no password":
+              this.$notify.error({
+                title: "登陆失败",
+                message: "密码错误"
+              });
+              break;
+            case "error,securityPolicy":
+              this.$notify.error({
+                title: "登陆失败",
+                message: "身份认证错误"
+              });
+              break;
+          }
+          if (res.data !== "error,no username" && res.data !== "error,no password" && res.data!=="error,securityPolicy"){
+            this.$notify({
+                title: "登陆成功",
+                message: "身份认证成功",
+                type: 'success'
+              });
+          }
+        })
+        .catch(() => {
+          this.$notify.error({
+            title: "登陆失败",
+            message: "服务端可能出现错误，请联系网站研发者"
+          });
+        });
     }
   }
 };
