@@ -33,6 +33,7 @@
 <script>
 import md5 from "js-md5";
 import axios from "axios";
+import Cookies from 'js-cookie'
 // import instance from '../axios'
 export default {
   name: "login",
@@ -72,7 +73,6 @@ export default {
           data
         )
         .then(res => {
-          console.log(res);
           switch (res.data) {
             case "error,no username":
               this.$notify.error({
@@ -94,9 +94,11 @@ export default {
               break;
           }
           if (res.data !== "error,no username" && res.data !== "error,no password" && res.data!=="error,securityPolicy"){
+            Cookies.set('token',res.data);
+            this.$router.push({path: '/'});
             this.$notify({
                 title: "登陆成功",
-                message: "身份认证成功",
+                message: "身份认证成功,正在登陆...",
                 type: 'success'
               });
           }
